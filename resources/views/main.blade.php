@@ -13,5 +13,6 @@
 	</div><!--Fim container-->
 	
     @include('partes._javascripts')
+    @yield('scripts')
   </body>
 </html>
