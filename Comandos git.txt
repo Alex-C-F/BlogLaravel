@@ -1,0 +1,15 @@
+Criar repositóio: git clone https...endereço do repositorio criado no github
+
+entrar na pasta pelo terminal
+
+Comitar para enviar: git commit -m "mensagem da alteração"
+
+Para adicionar ao repositóri local: git add .
+
+
+Comitar para enviar: git commit -m "mensagem da alteração"
+
+Enviar para o repositório web: git push
+
+
+ 

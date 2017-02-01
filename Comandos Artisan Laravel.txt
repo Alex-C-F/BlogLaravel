@@ -1,0 +1,16 @@
+======Comandos úteis=====
+
+php artisan make:model NomeModel --migration
+==Cria o model post e a migration para o model
+
+php artisan make:migration NomeMigration
+==Cria migration
+
+php artisan make:controller NomeController --resource
+==cria controller com o CRUD vazio
+
+php artisan route:list
+==lista as rotas disponiveis no projeto
+
+https://laravelcollective.com/docs/5.3/html
+==componente laravel para criação de forms prontos
