@@ -1,0 +1,1 @@
+﻿<p class="text-center">Copyright - Alex Todos os direitos reservados 2017</p>
