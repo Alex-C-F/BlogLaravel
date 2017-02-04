@@ -12,4 +12,12 @@ Comitar para enviar: git commit -m "mensagem da alteração"
 Enviar para o repositório web: git push
 
 
+Atenção Ao clonar um repositorio laravel
+
+1 - Recriar o banco de dados
+2 - renomear o .env.exemple -> .env
+3 - unsar o comando: php artisan key:generate
+
+Só assim funciona normalmente
+
  

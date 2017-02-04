@@ -16,7 +16,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('posts.index');
+        //cria os posts e armazena no banco de dados
+        $posts = Post::all();
+        return view('posts.index')->withPosts($posts);
     }
 
     /**
@@ -75,7 +77,9 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = new Post;
+        $post = Post::find($id); 
+        return view('posts.edit')-> with('post',$post);
     }
 
     /**
@@ -98,6 +102,6 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
     }
 }

@@ -11,11 +11,10 @@
         	<div class="col-md-8 col-md-offset-2">
             	<h1>Criar novo Post</h1>
                 <hr>
-               {!! Form::open(array('route'=>'posts.store', 'data-parsley-validate'=>'')) !!}
+               {!! Form::open(array('route'=>'posts.store')) !!}
                     <!-- Criando o form para cadastro com collective-->
                    {{ Form::label('titulo:','Titulo:') }}
-                   {{ Form::text('titulo',null,array('class'=>'form-control', 'data-parsley', 'required'=>'')) }}
-
+                   {{ Form::text('titulo',null,array('class'=>'form-control', 'data-parsley', 'required'=>''))}}
                    {{ Form::label('texto', 'Texto:')}} 
                    {{ Form::textarea('texto',null, array('class'=>'form-control', 'data-parsley', 'required'=>''))}} 
                 
