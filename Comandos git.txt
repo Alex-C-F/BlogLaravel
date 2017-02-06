@@ -1,4 +1,21 @@
-Criar repositóio: git clone https...endereço do repositorio criado no github
+Criar Repositório
+
+1 - Criar uma pasta
+2 - cd pasta_criada
+3 - git init para criar o repositorio nessa pasta
+  compartilhando no git hub
+1 - ssh-keygen -t rsa -C "seu_email@email.com" -> cria uma chave para  ser colo
+cada no repositorio web
+2 - notepad ~/.ssh/id_rsa.pub => abrir o bloco de notas com a key
+3 - colar no github a senha
+4 - ssh -T git@github.com => testa tudo,digite yes e depois a senha, enter, se aparecer
+---->Hi doug2k1! You've successfully authenticated, but GitHub does not provide shell access. ta ok
+
+5 - git remote add origin git@github.com:seu_login/nome_do_repositorio.git ==>para adicionar ao repositorio
+6 - git push origin master --> para enviar tudo
+
+
+Clonar repositóio: git clone https...endereço do repositorio criado no github
 
 entrar na pasta pelo terminal
 

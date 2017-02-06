@@ -9,6 +9,11 @@ use Session;
 
 class PostController extends Controller
 {
+    public function __constructor()
+    {
+        $thid->middleware('auth', [
+            'only'=>['index','show']]);
+    }
     /**
      * Display a listing of the resource.
      *
