@@ -21,8 +21,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //cria os posts e armazena no banco de dados
-        $posts = Post::all();
+        //cria os posts na ordem e armazena no banco de dados
+        $posts = Post::orderBy('id','des')->paginate(5);//incluindo paginação
         //passa uma lista com todos os posts
         return view('posts.index')->withPosts($posts);
     }
