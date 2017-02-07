@@ -6,7 +6,7 @@
 			<h1>Todos os Posts</h1>	
 		</div>
 		<div class="col-md-2">
-			<a href="{{ route('posts.create')}}" class="btn btn-lg btn-block btn-primary">Criar Novo Post</a>
+			<a href="{{ route('posts.create')}}" class="btn btn-lg btn-block btn-primary">Novo Post</a>
 		</div>
 		
 	</div> <!-- fim row-->

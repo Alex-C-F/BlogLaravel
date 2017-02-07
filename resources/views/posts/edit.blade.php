@@ -2,7 +2,7 @@
 @section('title','| View Post')
 @section('content')
   <div class="row">
-  {!! Form::model($post, ['route'=>['posts.update',$post->id]]) !!}
+  {!! Form::model($post, ['route'=>['posts.update',$post->id],'method'=>'PUT']) !!}
           <div class="col-md-8">
             {{Form::label('titulo', 'Titulo:')}}
             {{Form::text('titulo',null,["class"=>'form-control input-lg'])}}
@@ -23,7 +23,7 @@
             <hr>
             <div class="row">
               <div class="col-sm-6">
-                {!! Html::linkRoute('posts.update', 'Salvar alterações',array($post->id), array('class'=>'btn btn-success btn-block')) !!}
+                {{ Form::submit('Salvar dados', ['class'=>'btn btn-success btn-block'])}}
                 
               </div>
               <div class="col-sm-6">

@@ -23,6 +23,7 @@ class PostController extends Controller
     {
         //cria os posts e armazena no banco de dados
         $posts = Post::all();
+        //passa uma lista com todos os posts
         return view('posts.index')->withPosts($posts);
     }
 
@@ -69,8 +70,11 @@ class PostController extends Controller
      */
     public function show($id)
     {
+        //instancia um post
         $post = new post;
+        //busca por id
         $post = Post::find($id);
+        //retorna o post enviando para a view show
         return view('posts.show')->with('post',$post);
     }
 
@@ -82,9 +86,12 @@ class PostController extends Controller
      */
     public function edit($id)
     {
+        //instancia um post
         $post = new Post;
+        //busca pelo id
         $post = Post::find($id); 
-        return view('posts.edit')-> with('post',$post);
+        //envia o post para a view edit
+        return view('posts.edit')-> withPost($post);
     }
 
     /**
@@ -96,7 +103,21 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       //Validação
+        $this->validate($request, array(
+                'titulo' => 'required|max:255',
+                'texto' => 'required'
+            ));
+
+        //armazenamento no banco de dados
+        $post =Post::find($id);
+        $post->titulo =  $request->input('titulo');
+        $post->texto =  $request->input('texto');
+
+        $post->save();
+        Session::flash('success', 'Dados alterados com sucesso!');
+        //redirecionar para a página
+        return redirect()->route('posts.show',$post->id);
     }
 
     /**
@@ -107,6 +128,6 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        
+        return redirect()->route('posts.destroy');
     }
 }

@@ -24,6 +24,7 @@
 				</div>
 				<div class="col-sm-6">
 					{!! Html::linkRoute('posts.destroy', 'Excluir',array($post->id), array('class'=>'btn btn-danger btn-block')) !!}
+					
 				</div>
 			</div>
 		</div>
