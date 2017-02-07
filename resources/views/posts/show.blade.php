@@ -19,7 +19,7 @@
 			<hr>
 			<div class="row">
 				<div class="col-sm-6">
-					{!! Html::linkRoute('posts.edit', 'Editar',array($post->id), array('class'=>'btn btn-primary btn-block')) !!}
+					{!! Html::linkRoute('posts.edit', 'Editar',array($post->id), array('class'=>'btn btn-success btn-block')) !!}
 					
 				</div>
 				<div class="col-sm-6">
@@ -28,6 +28,10 @@
 					
 					{!! Form::close() !!}
 					
+				</div>
+				<hr>
+				<div class="col-sm-12">
+					{!! Html::linkRoute('posts.index', '<< Ver todos os posts',null,array('class'=>'btn btn-primary btn-block')) !!}					
 				</div>
 			</div>
 		</div>
