@@ -23,7 +23,10 @@
 					
 				</div>
 				<div class="col-sm-6">
-					{!! Html::linkRoute('posts.destroy', 'Excluir',array($post->id), array('class'=>'btn btn-danger btn-block')) !!}
+					{!! Form::open(['route'=>['posts.destroy', $post->id], 'method'=>'DELETE']) !!}<!-- http://laravel-recipes.com/recipes/124/opening-a-new-html-form-->
+						{!! Form::submit('Excluir',['class'=>'btn btn-danger btn-block']) !!}
+					
+					{!! Form::close() !!}
 					
 				</div>
 			</div>
