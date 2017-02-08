@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"di",
+				"div\t<div>"
+			],
+			[
+				"pos",
+				"post"
+			],
+			[
 				"u",
 				"ul\t<ul>"
 			],
@@ -36,10 +44,6 @@
 				"view"
 			],
 			[
-				"di",
-				"dir\tTag"
-			],
-			[
 				"uni",
 				"unique"
 			]
@@ -51,16 +55,26 @@
 			"file": "app/Http/Controllers/PostController.php",
 			"settings":
 			{
-				"buffer_size": 2544,
+				"buffer_size": 3519,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/wamp/www/estoque-laravel/resources/views/auth/login.blade.php",
+			"file": "resources/views/posts/show.blade.php",
 			"settings":
 			{
-				"buffer_size": 1726,
+				"buffer_size": 1229,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/posts/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 1488,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		}
@@ -114,30 +128,33 @@
 	},
 	"expanded_folders":
 	[
+		"/C/wamp/www/BlogLaravel",
+		"/C/wamp/www/BlogLaravel/app",
 		"/C/wamp/www/BlogLaravel/app/Http",
 		"/C/wamp/www/BlogLaravel/app/Http/Controllers",
 		"/C/wamp/www/BlogLaravel/resources",
 		"/C/wamp/www/BlogLaravel/resources/views",
-		"/C/wamp/www/estoque-laravel",
+		"/C/wamp/www/BlogLaravel/resources/views/posts",
 		"/C/wamp/www/estoque-laravel/app",
-		"/C/wamp/www/estoque-laravel/app/Http/Controllers",
-		"/C/wamp/www/estoque-laravel/app/Http/Middleware",
-		"/C/wamp/www/estoque-laravel/database/migrations",
 		"/C/wamp/www/estoque-laravel/resources",
 		"/C/wamp/www/estoque-laravel/resources/views",
 		"/C/wamp/www/estoque-laravel/resources/views/auth"
 	],
 	"file_history":
 	[
+		"/C/wamp/www/BlogLaravel/resources/views/posts/destroy.blade.php",
+		"/C/wamp/www/BlogLaravel/app/Http/Controllers/PostController.php",
+		"/C/wamp/www/BlogLaravel/resources/views/posts/show.blade.php",
+		"/C/wamp/www/BlogLaravel/resources/views/posts/edit.blade.php",
+		"/C/wamp/www/BlogLaravel/resources/views/posts/index.blade.php",
+		"/C/wamp/bin/apache/apache2.4.23/conf/httpd.conf",
 		"/C/wamp/www/estoque-laravel/app/Http/Controllers/ProdutoController.php",
 		"/C/wamp/www/BlogLaravel/.env",
 		"/C/wamp/www/estoque-laravel/.env",
 		"/C/wamp/www/estoque-laravel/database/migrations/2014_10_12_100000_create_password_resets_table.php",
 		"/C/wamp/www/estoque-laravel/resources/views/produto/listagem.blade.php",
 		"/C/wamp/www/estoque-laravel/database/migrations/2017_02_06_182408_produtos.php",
-		"/C/wamp/www/BlogLaravel/resources/views/posts/show.blade.php",
 		"/C/wamp/www/BlogLaravel/config/app.php",
-		"/C/wamp/www/BlogLaravel/app/Http/Controllers/PostController.php",
 		"/C/wamp/www/BlogLaravel/resources/views/posts/create.blade.php",
 		"/C/wamp/www/BlogLaravel/resources/views/partes/_mensagens.blade.php",
 		"/C/wamp/www/BlogLaravel/resources/views/main.blade.php",
@@ -167,7 +184,7 @@
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -181,6 +198,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"deny",
+			"dorectory",
+			"server",
+			"server admin",
+			"virtual ",
 			"function",
 			"increments",
 			"table"
@@ -219,15 +241,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2544,
+						"buffer_size": 3519,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								356,
-								356
+								751,
+								751
 							]
 						],
 						"settings":
@@ -245,19 +267,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/C/wamp/www/estoque-laravel/resources/views/auth/login.blade.php",
-					"semi_transient": true,
+					"file": "resources/views/posts/show.blade.php",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1726,
+						"buffer_size": 1229,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1109,
+								1109
 							]
 						],
 						"settings":
@@ -266,10 +288,39 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 228.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "resources/views/posts/index.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1488,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								679,
+								621
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 570.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -352,7 +403,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 274.0,
+	"side_bar_width": 178.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
