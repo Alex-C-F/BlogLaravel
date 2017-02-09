@@ -1,24 +1,24 @@
 @extends('main')
 @section('title','| View Post')
 @section('content')
-	<div class="row">
-		<div class="col-md-8">
-			<h1>{{ $post->titulo }}</h1>
+<div class="row">
+	<div class="col-md-8">
+		<h1>{{ $post->titulo }}</h1>
 		<p class="lead"> {{ $post->texto }}</p>
-		</div>
-		<div class="col-md-4">
+	</div>
+	<div class="col-md-4">
 		<div class="well">
 			<dl class="dl-horizontal">
-				<dt>Url: </dt>
+				<label>Url: </label>
 				<label><a href="{{url($post->slug)}}">{{url($post->slug)}}</a></label>
 			</dl>
 			<dl class="dl-horizontal">
-				<dt>Criado em:</dt>
-				<dd>{{date('M j, Y H:i', strtotime($post->created_at))}}</dd>
+				<label>Criado em:</label>
+				<label>{{date('M j, Y H:i', strtotime($post->created_at))}}</label>
 			</dl>
 			<dl class="dl-horizontal">
-				<dt>Última atualização</dt>
-				<dd>{{date('M j, Y H:i', strtotime($post->updated_at))}}</dd>
+				<label>Última atualização:</label>
+				<label>{{date('M j, Y H:i', strtotime($post->updated_at))}}</label>
 			</dl>
 			<hr>
 			<div class="row">
@@ -28,7 +28,7 @@
 				</div>
 				<div class="col-sm-6">
 					{!! Form::open(['route'=>['posts.destroy', $post->id], 'method'=>'DELETE']) !!}<!-- http://laravel-recipes.com/recipes/124/opening-a-new-html-form-->
-						{!! Form::submit('Excluir',['class'=>'btn btn-danger btn-block']) !!}
+					{!! Form::submit('Excluir',['class'=>'btn btn-danger btn-block']) !!}
 					
 					{!! Form::close() !!}
 					
@@ -40,9 +40,9 @@
 			</div>
 		</div>
 	</div>
-		
-	</div>
+	
+</div>
 
-	
-	
+
+
 @endsection

@@ -49,7 +49,7 @@ class PostController extends Controller
         $this->validate($request, array(
                 'titulo' => 'required|max:255',
                 'texto' => 'required',
-                'slug' => 'required|alpha_dash|min:5|max:255'
+                'slug' => 'required|alpha_dash|min:5|max:255|unique:posts,slug'
             ));
 
         //armazenamento no banco de dados
@@ -109,14 +109,14 @@ class PostController extends Controller
         $this->validate($request, array(
                 'titulo' => 'required|max:255',
                 'texto' => 'required',
-                'slug' => 'requeried|alpha_dash|min:5|max:255'
+                'slug' => 'required|alpha_dash|min:5|max:255'
             ));
 
         //armazenamento no banco de dados
         $post =Post::find($id);
         $post->titulo =  $request->input('titulo');
         $post->texto =  $request->input('texto');
-        $post->texto =  $request->input('slug');
+        $post->slug =  $request->input('slug');
 
         $post->save();
         Session::flash('success', 'Dados alterados com sucesso!');

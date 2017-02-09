@@ -14,11 +14,10 @@
 
 
 Route::group(['middleware'=>['web']], function(){
+	route::get('blog/{slug}',['as' => 'blog.single', 'uses' => 'BlogController@getSingle']);
 	Route::get('/','PagesController@getIndex');
 	Route::get('/about', 'PagesController@getAbout');
 	Route::get('/contact', 'PagesController@getContact');
-	Route::get('/create', 'PostController@create');
-	Route::get('/leiamais','PagesController@getdetalhes');
 	Route::resource('posts','PostController');
 });
 
