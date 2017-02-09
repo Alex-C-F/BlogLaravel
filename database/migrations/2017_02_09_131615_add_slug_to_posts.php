@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostsTable extends Migration
+class AddSlugToPosts extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('titulo',200)->default('sem titulo');
-            $table->text('texto',254);
-            $table->timestamps();
+        Schema::table('posts',function($table){
+            $table->string('slug')->unique()->after('texto');
         });
     }
 
@@ -28,6 +25,8 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::table('posts', function($table){
+             $table->dropColumn('slug');
+        });
     }
 }

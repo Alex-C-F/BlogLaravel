@@ -55,7 +55,7 @@ class PostController extends Controller
         //armazenamento no banco de dados
         $post = new Post();
         $post->titulo =  $request->titulo;
-        $post->titulo =  $request->slug;
+        $post->slug =  $request->slug;
         $post->texto =  $request->texto;
 
         $post->save();
