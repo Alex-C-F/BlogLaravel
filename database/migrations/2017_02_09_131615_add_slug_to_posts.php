@@ -14,7 +14,7 @@ class AddSlugToPosts extends Migration
     public function up()
     {
         Schema::table('posts',function($table){
-            $table->string('slug')->unique()->after('texto');
+            $table->string('slug',100)->unique()->after('texto');
         });
     }
 

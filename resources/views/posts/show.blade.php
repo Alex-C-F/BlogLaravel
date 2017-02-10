@@ -10,7 +10,7 @@
 		<div class="well">
 			<dl class="dl-horizontal">
 				<label>Url: </label>
-				<label><a href="{{url($post->slug)}}">{{url($post->slug)}}</a></label>
+				<label><a href="{{ route('blog.single',$post->slug ) }}">{{ route('blog.single',$post->slug) }}</a></label>
 			</dl>
 			<dl class="dl-horizontal">
 				<label>Criado em:</label>
