@@ -7,6 +7,7 @@
 	@include('partes._nav')
 	<div class = "container">
   		@include('partes._mensagens')
+  		{{ Auth::check() ? "Logged In" : "Logged Out"}}
 		@yield('content')
 		<hr>
  		@include('partes._footer')

@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"view",
+				"view"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"p",
+				"p\tTag"
+			],
+			[
+				"r",
+				"row"
+			],
+			[
+				"function",
+				"runkit_function_copy"
+			],
+			[
+				"functi",
+				"function"
+			],
+			[
 				"hr",
 				"href\tAttr"
 			],
@@ -60,28 +88,20 @@
 	"buffers":
 	[
 		{
-			"file": "resources/views/posts/create.blade.php",
+			"file": "app/Http/Controllers/Auth/RegisterController.php",
 			"settings":
 			{
-				"buffer_size": 1119,
+				"buffer_size": 2013,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "routes/web.php",
+			"file": "resources/views/main.blade.php",
 			"settings":
 			{
-				"buffer_size": 735,
+				"buffer_size": 381,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "database/migrations/2017_01_30_201625_create_posts_table.php",
-			"settings":
-			{
-				"buffer_size": 690,
 				"line_ending": "Windows"
 			}
 		},
@@ -89,18 +109,17 @@
 			"file": "app/Http/Controllers/PostController.php",
 			"settings":
 			{
-				"buffer_size": 3750,
+				"buffer_size": 4057,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/Http/Controllers/BlogController.php",
+			"file": "/C/wamp/www/estoque-laravel/app/Http/Middleware/Authenticate.php",
 			"settings":
 			{
-				"buffer_size": 177,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"buffer_size": 755,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -111,10 +130,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 35.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"About"
+			],
 			[
 				"install ",
 				"Package Control: Install Package"
@@ -124,7 +147,7 @@
 				"Plugin Development: Convert Syntax to .sublime-syntax"
 			]
 		],
-		"width": 512.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -153,34 +176,61 @@
 	},
 	"expanded_folders":
 	[
-		"/C/wamp/www/BlogLaravel",
-		"/C/wamp/www/BlogLaravel/app/Console",
-		"/C/wamp/www/BlogLaravel/app/Http",
+		"/C/wamp/www/BlogLaravel/app",
 		"/C/wamp/www/BlogLaravel/app/Http/Controllers",
-		"/C/wamp/www/BlogLaravel/database",
 		"/C/wamp/www/BlogLaravel/database/migrations",
-		"/C/wamp/www/BlogLaravel/resources",
+		"/C/wamp/www/BlogLaravel/resources/assets",
 		"/C/wamp/www/BlogLaravel/resources/views",
-		"/C/wamp/www/BlogLaravel/resources/views/pages/_notes",
-		"/C/wamp/www/BlogLaravel/resources/views/posts"
+		"/C/wamp/www/BlogLaravel/vendor",
+		"/C/wamp/www/BlogLaravel/vendor/laravel/framework",
+		"/C/wamp/www/BlogLaravel/vendor/laravel/framework/src",
+		"/C/wamp/www/BlogLaravel/vendor/laravel/framework/src/Illuminate",
+		"/C/wamp/www/BlogLaravel/vendor/laravel/framework/src/Illuminate/Auth",
+		"/C/wamp/www/BlogLaravel/vendor/laravel/framework/src/Illuminate/Auth/Middleware",
+		"/C/wamp/www/BlogLaravel/vendor/laravel/framework/src/Illuminate/Foundation",
+		"/C/wamp/www/BlogLaravel/vendor/laravel/framework/src/Illuminate/Foundation/Auth/Access",
+		"/C/wamp/www/estoque-laravel",
+		"/C/wamp/www/estoque-laravel/app",
+		"/C/wamp/www/estoque-laravel/app/Http",
+		"/C/wamp/www/estoque-laravel/app/Http/Middleware"
 	],
 	"file_history":
 	[
+		"/C/wamp/www/BlogLaravel/vendor/laravel/framework/src/Illuminate/Routing/Controller.php",
+		"/C/wamp/www/BlogLaravel/routes/web.php",
+		"/C/wamp/www/BlogLaravel/resources/views/auth/register.blade.php",
+		"/C/wamp/www/BlogLaravel/resources/views/posts/create.blade.php",
+		"/C/wamp/www/BlogLaravel/app/Http/Controllers/Auth/LoginController.php",
+		"/C/wamp/www/BlogLaravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php",
+		"/C/wamp/www/BlogLaravel/app/Http/Middleware/RedirectIfAuthenticated.php",
+		"/C/wamp/www/BlogLaravel/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php",
+		"/C/wamp/www/BlogLaravel/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php",
+		"/C/wamp/www/BlogLaravel/resources/views/auth/login.blade.php",
 		"/C/wamp/www/BlogLaravel/resources/views/partes/_nav.blade.php",
+		"/C/wamp/www/BlogLaravel/public/css/styles.css",
+		"/C/wamp/www/BlogLaravel/app/Http/Controllers/Auth/RegisterController.php",
+		"/C/wamp/www/BlogLaravel/app/Http/Controllers/PagesController.php",
+		"/C/wamp/www/BlogLaravel/app/Http/Controllers/PostController.php",
+		"/C/wamp/www/BlogLaravel/app/Http/Controllers/BlogController.php",
+		"/C/wamp/www/BlogLaravel/resources/views/auth/logout.blade.php",
+		"/C/wamp/www/BlogLaravel/app/User.php",
+		"/C/wamp/www/BlogLaravel/resources/views/blog/index.blade.php",
+		"/C/wamp/www/BlogLaravel/resources/views/posts/index.blade.php",
+		"/C/wamp/www/BlogLaravel/config/app.php",
+		"/C/wamp/www/BlogLaravel/resources/views/pages/welcome.blade.php",
+		"/C/wamp/www/estoque-laravel - Copia/index.php",
+		"/C/wamp/www/BlogLaravel/database/migrations/2017_02_09_131615_add_slug_to_posts.php",
 		"/C/wamp/www/BlogLaravel/resources/views/posts/show.blade.php",
+		"/C/wamp/bin/mysql/mysql5.7.14/my.ini",
+		"/C/wamp/www/BlogLaravel/resources/views/blog/single.blade.php",
+		"/C/wamp/www/BlogLaravel/resources/views/posts/single.blade.php",
 		"/C/Users/JOTAM02/AppData/Roaming/Sublime Text 3/Packages/Emmet/Default (Windows).sublime-keymap",
 		"/C/Users/JOTAM02/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
 		"/C/wamp/www/BlogLaravel/resources/views/posts/edit.blade.php",
-		"/C/wamp/www/BlogLaravel/resources/views/posts/index.blade.php",
 		"/C/Users/JOTAM02/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/C/wamp/www/BlogLaravel/resources/views/posts/create.blade.php",
 		"/C/Users/JOTAM02/AppData/Roaming/Sublime Text 3/Packages/User/Emmet.sublime-settings",
-		"/C/wamp/www/BlogLaravel/app/Http/Controllers/PostController.php",
-		"/C/wamp/www/BlogLaravel/resources/views/pages/welcome.blade.php",
 		"/C/wamp/www/BlogLaravel/database/migrations/2017_01_30_201625_create_posts_table.php",
-		"/C/wamp/www/BlogLaravel/app/Http/Controllers/PagesController.php",
 		"/C/wamp/www/BlogLaravel/resources/views/pages/leiamais.blade.php",
-		"/C/wamp/www/BlogLaravel/routes/web.php",
 		"/C/wamp/www/BlogLaravel/resources/views/posts/destroy.blade.php",
 		"/C/wamp/bin/apache/apache2.4.23/conf/httpd.conf",
 		"/C/wamp/www/estoque-laravel/app/Http/Controllers/ProdutoController.php",
@@ -189,7 +239,6 @@
 		"/C/wamp/www/estoque-laravel/database/migrations/2014_10_12_100000_create_password_resets_table.php",
 		"/C/wamp/www/estoque-laravel/resources/views/produto/listagem.blade.php",
 		"/C/wamp/www/estoque-laravel/database/migrations/2017_02_06_182408_produtos.php",
-		"/C/wamp/www/BlogLaravel/config/app.php",
 		"/C/wamp/www/BlogLaravel/resources/views/partes/_mensagens.blade.php",
 		"/C/wamp/www/BlogLaravel/resources/views/main.blade.php",
 		"/C/wamp/www/BlogLaravel/resources/views/partes/_head.blade.php",
@@ -229,6 +278,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"404",
+			"    \n",
+			"Authenticate",
+			"AuthController",
+			"<?",
 			"deny",
 			"dorectory",
 			"server",
@@ -241,7 +295,7 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
 		],
@@ -263,81 +317,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "resources/views/posts/create.blade.php",
+					"file": "app/Http/Controllers/Auth/RegisterController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1119,
+						"buffer_size": 2013,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								660,
-								661
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 114.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "routes/web.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 735,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								528,
-								528
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 304.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "database/migrations/2017_01_30_201625_create_posts_table.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 690,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								239,
-								239
+								879,
+								879
 							]
 						],
 						"settings":
@@ -350,24 +347,52 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/Http/Controllers/PostController.php",
+					"buffer": 1,
+					"file": "resources/views/main.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3750,
+						"buffer_size": 381,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1154,
-								1154
+								213,
+								213
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 57.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/Http/Controllers/PostController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4057,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								385,
+								385
 							]
 						],
 						"settings":
@@ -377,38 +402,39 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 798.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app/Http/Controllers/BlogController.php",
-					"semi_transient": false,
+					"buffer": 3,
+					"file": "/C/wamp/www/estoque-laravel/app/Http/Middleware/Authenticate.php",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 177,
+						"buffer_size": 755,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								168,
-								168
+								192,
+								192
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 29.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -491,7 +517,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 295.0,
+	"side_bar_width": 247.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

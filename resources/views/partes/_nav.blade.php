@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Laravel Blog</a>
+      <a class="navbar-brand" href="#">Blog em Laravel</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -17,6 +17,7 @@
       <ul class="nav navbar-nav">
         <li class="{{Request::is('/') ? "active" : ""}}"><a href="/">Home</a></li>
         <li class="{{Request::is('contact') ? "active" : ""}}"><a href="/contact">Contato</a></li>
+          <li class="{{Request::is('blog') ? "active" : ""}}"><a href="/blog">Blog</a></li>
         <li class="{{Request::is('about') ? "active" : ""}}"><a href="/about">Sobre</a></li>
         
       </ul>
@@ -26,11 +27,11 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Minha conta <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href='posts/create'>Criar posts</a></li>
-            <li><a href="/posts">Ver Posts</a></li>
+            <li><a href="{{route('posts.index')}}">Posts</a></li>
+            <li><a href="{{route('posts.create')}}">Create Posts</a></li>
             <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            <li><a href="#">Logout</a></li>
           </ul>
         </li>
       </ul>

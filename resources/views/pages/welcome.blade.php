@@ -6,7 +6,7 @@
     		<div class = "col-md-12">
     			<div class="jumbotron">
     				<h1>Seja bem vindo ao meu blog</h1>
-    				<p class="jumbotron">Nele teremos muitas informações a respeito da jotam cursos profisionalizantes
+    				<p class="jumbotron">Nele teremos muitas informações a respeito de diversos temas para exemplificar o uso de laravel.
                     </p>
                     <p><a class="btn-primary btn-lg" href="#" role="button">Popular post</a></p>
     			</div>
@@ -31,9 +31,7 @@
               	</div>
 
     	</div><!--Fim row--><!--Fim row-->
-        <div class="text-center">
-            {!! $posts->links(); !!}
-        </div>
+       
         
 @endsection
 	
