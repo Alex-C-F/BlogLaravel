@@ -7,6 +7,7 @@ use App\Post;
 
 class PagesController extends Controller
 {
+	
 	public function getIndex(){
 		//$posts = new Post();
 		$posts = Post::orderBy('created_at','des')->paginate(5);

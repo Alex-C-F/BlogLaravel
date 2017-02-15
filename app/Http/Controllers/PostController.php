@@ -9,9 +9,9 @@ use Session;
 
 class PostController extends Controller
 {
-    public function __constructor()
+    public function __construct()
     {
-        $thid->middleware('auth', [
+        $this->middleware('auth', [
             'only'=>['index','show']]);
     }
     /**
