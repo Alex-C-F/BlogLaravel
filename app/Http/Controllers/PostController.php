@@ -6,6 +6,7 @@ use App\Post;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Session;
+use Image;
 
 class PostController extends Controller
 {
@@ -58,7 +59,14 @@ class PostController extends Controller
         $post->titulo =  $request->titulo;
         $post->slug =  $request->slug;
         $post->texto =  $request->texto;
-
+        //adiciona imagem
+        if($request->hasFile('file_imagem')){
+            $image = $request->file('file_imagem');
+            $nomeImagem = time().'.'.$image->getClientOriginalExtension();
+            $local = public_path('images/'.$nomeImagem);
+            Image::make($image)->resize(800,400)->save($local);
+            $post->imagem = $nomeImagem;
+        }
         $post->save();
         Session::flash('success', 'Dados salvos com sucesso!');
         //redirecionar para a página

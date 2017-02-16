@@ -7,7 +7,7 @@
 	@include('partes._nav')
 	<div class = "container">
   		@include('partes._mensagens')
-  		
+ 
 		@yield('content')
 		<hr>
  		@include('partes._footer')
