@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Session;
 use Image;
+use Storage;
 
 class PostController extends Controller
 {
@@ -23,7 +24,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //cria os posts na ordem e armazena no banco de dados
+        //armazena os posts na variavel $posts na ordem ascendente
         $posts = Post::orderBy('id','asc')->paginate(5);//incluindo paginação
         //passa uma lista com todos os posts
         return view('posts.index')->withPosts($posts);
@@ -51,7 +52,8 @@ class PostController extends Controller
         $this->validate($request, array(
                 'titulo' => 'required|max:255',
                 'texto' => 'required',
-                'slug' => 'required|alpha_dash|min:5|max:255|unique:posts,slug'
+                'slug' => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
+                'file_imagem' => 'sometimes|image'
             ));
 
         //armazenamento no banco de dados
@@ -128,7 +130,8 @@ class PostController extends Controller
              $this->validate($request, array(
                 'titulo' => 'required|max:255',
                 'texto' => 'required',
-                'slug' => 'required|alpha_dash|min:5|max:255'
+                'slug' => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
+                'file_imagem' => 'sometimes|image'
             ));
         }
         //armazenamento no banco de dados
@@ -137,6 +140,18 @@ class PostController extends Controller
         $post->texto =  $request->input('texto');
         $post->slug =  $request->input('slug');
 
+        if ($request->hasFile ('file_imagem')) {
+            //adiciona a nova fot
+            $image = $request->file('file_imagem');
+            $nomeImagem = time().'.'.$image->getClientOriginalExtension();
+            $local = public_path('images/'.$nomeImagem);
+            Image::make($image)->resize(800,400)->save($local);
+            $imagemAntiga = $post->imagem;
+            //atualiza o banco de dados
+            $post->imagem = $nomeImagem;
+            //deleta a outra foto
+            Storage::delete($imagemAntiga);
+        }
         $post->save();
         Session::flash('success', 'Dados alterados com sucesso!');
         //redirecionar para a página
@@ -152,6 +167,7 @@ class PostController extends Controller
     public function destroy($id)
     {
         $post = Post::find($id);
+        Storage::delete($post->imagem);
         $post->delete();
         Session::flash('success','O Post foi deletado com sucesso!');
         return redirect()->route('posts.index');
