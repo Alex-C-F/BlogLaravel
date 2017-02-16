@@ -1,4 +1,4 @@
-======Comandos úteis=====
+======Comandos Ãºteis=====
 
 php artisan make:model NomeModel --migration
 ==Cria o model post e a migration para o model
@@ -13,4 +13,6 @@ php artisan route:list
 ==lista as rotas disponiveis no projeto
 
 https://laravelcollective.com/docs/5.3/html
-==componente laravel para criação de forms prontos
+==componente laravel para criaÃ§Ã£o de forms prontos
+==Cria uma coluna na tabela existente posts
+php artisan make:migration add_image_col_posts --table posts
