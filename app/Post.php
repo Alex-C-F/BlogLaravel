@@ -6,11 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    
-    /*atributos
-    private integer id;
-    private String titulo;
-    private String texto;
-*/
+    //indica que a chave categoria_id pertence a categoria
+    public function categoria()
+    {
+    	return $this->belongsTo('App\Categoria');
+    }
 
 }

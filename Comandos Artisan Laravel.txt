@@ -1,4 +1,4 @@
-======Comandos úteis=====
+﻿======Comandos úteis=====
 
 php artisan make:model NomeModel --migration
 ==Cria o model post e a migration para o model
@@ -16,3 +16,10 @@ https://laravelcollective.com/docs/5.3/html
 ==componente laravel para criação de forms prontos
 ==Cria uma coluna na tabela existente posts
 php artisan make:migration add_image_col_posts --table posts
+
+php artisan make:model nomeModel =>>cria um model especifico
+
+php artisan make:migration create_categorias_table --create = categorias ==>cria uma migration com o nome create_categorias_table
+
+php artisan make:migration add_categoria_id_to_posts --table=posts ==>cria a migration add_categoria_id_to_posts para adicionar uma
+chave secundária de categorias em posts

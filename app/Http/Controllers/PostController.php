@@ -135,7 +135,7 @@ class PostController extends Controller
             ));
         }
         //armazenamento no banco de dados
-        $post =Post::find($id);
+        //$post =Post::find($id);
         $post->titulo =  $request->input('titulo');
         $post->texto =  $request->input('texto');
         $post->slug =  $request->input('slug');

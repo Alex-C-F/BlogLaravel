@@ -37,6 +37,9 @@
             <li><a href="{{route('posts.index')}}">Ver Posts</a></li>
             <li><a href="{{route('posts.create')}}">Criar Posts</a></li>
             <li role="separator" class="divider"></li>
+             <li><a href="{{route('categorias.index')}}">Ver Categorias</a></li>
+            <li><a href="{{route('categorias.create')}}">Criar Categorias</a></li>
+            <li role="separator" class="divider"></li>
            
                 <li>
                   <a href="{{ route('logout') }}"

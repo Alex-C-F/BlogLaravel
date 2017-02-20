@@ -10,9 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-
 Route::group(['middleware'=>['web']], function(){
 	//rotas de atenticação
 
@@ -23,7 +20,7 @@ Route::group(['middleware'=>['web']], function(){
 	Route::get('/about', 'PagesController@getAbout');
 	Route::get('/contact', 'PagesController@getContact');
 	Route::resource('posts','PostController');
-
+	Route::resource('categorias','CategoriasController');
 	Auth::routes();
 
 
