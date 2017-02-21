@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Session;
 use Image;
 use Storage;
+use App\Categoria;
 
 class PostController extends Controller
 {
@@ -37,7 +38,14 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        //obtendo todas as categorias
+        $categorias = Categoria::all();
+        //adicionando as categorias a um array
+        $cats = array();
+        foreach ($categorias as $categoria) {
+            $cats[$categoria->id] = $categoria->nome;
+        }
+        return view('posts.create')->withCats($cats);
     }
 
     /**
@@ -50,16 +58,19 @@ class PostController extends Controller
     {
         //Validação
         $this->validate($request, array(
-                'titulo' => 'required|max:255',
-                'texto' => 'required',
-                'slug' => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
-                'file_imagem' => 'sometimes|image'
+                'titulo'        => 'required|max:255',
+                'texto'         => 'required',
+                'slug'          => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
+                'categoria_id'  =>'required|integer',
+                'file_imagem'   => 'sometimes|image'
+
             ));
 
         //armazenamento no banco de dados
         $post = new Post();
         $post->titulo =  $request->titulo;
         $post->slug =  $request->slug;
+        $post->categoria_id = $request->categoria_id;
         $post->texto =  $request->texto;
         //adiciona imagem
         if($request->hasFile('file_imagem')){
@@ -99,12 +110,18 @@ class PostController extends Controller
      */
     public function edit($id)
     {
+        //obtendo todas as categorias
+        $categorias = Categoria::all();
+        $cats = array();
+        foreach ($categorias as $categoria) {
+            $cats[$categoria->id] = $categoria->nome;
+        }
         //instancia um post
         $post = new Post;
         //busca pelo id
         $post = Post::find($id); 
         //envia o post para a view edit
-        return view('posts.edit')-> withPost($post);
+        return view('posts.edit')-> withPost($post)->withCats($cats);
     }
 
     /**
@@ -124,6 +141,8 @@ class PostController extends Controller
              $this->validate($request, array(
                 'titulo' => 'required|max:255',
                 'texto' => 'required',
+                'categoria_id'  =>'required|integer',
+                'file_imagem' => 'sometimes|image'
             ));
         }else {
             # code...
@@ -131,14 +150,16 @@ class PostController extends Controller
                 'titulo' => 'required|max:255',
                 'texto' => 'required',
                 'slug' => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
+                'categoria_id'  =>'required|integer',
                 'file_imagem' => 'sometimes|image'
             ));
         }
         //armazenamento no banco de dados
         //$post =Post::find($id);
-        $post->titulo =  $request->input('titulo');
-        $post->texto =  $request->input('texto');
-        $post->slug =  $request->input('slug');
+        $post->titulo =         $request->input('titulo');
+        $post->texto =          $request->input('texto');
+        $post->slug =           $request->input('slug');
+        $post->categoria_id =   $request->input('categoria_id');
 
         if ($request->hasFile ('file_imagem')) {
             //adiciona a nova fot
@@ -172,4 +193,6 @@ class PostController extends Controller
         Session::flash('success','O Post foi deletado com sucesso!');
         return redirect()->route('posts.index');
     }
+    //Hello, this is a snippet.
+ 
 }

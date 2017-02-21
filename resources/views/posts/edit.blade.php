@@ -10,6 +10,10 @@
     {{Form::label('slug', 'Slug:')}}
     {{Form::text('slug',null,["class"=>'form-control input-lg'])}}
     
+    {{ Form::label('categoria','Categoria')}}
+    
+    {{Form::select('categoria_id',$cats,null,['class'=>'form-control' ])}}
+
     {{Form::label('texto', 'Texto:',["class"=>'form-spacing-top'])}}
     {{Form::textarea("texto", null, ["class"=>'form-control'])}}
 
@@ -25,6 +29,14 @@
       <dl class="dl-horizontal">
         <dt>Última atualização</dt>
         <dd>{{date('M j, Y H:i', strtotime($post->updated_at))}}</dd>
+      </dl>
+      <dl class="dl-horizontal">
+        <label>Url: </label>
+        <label><a href="{{ route('blog.single',$post->slug ) }}">{{ route('blog.single',$post->slug) }}</a></label>
+      </dl>
+      <dl class="dl-horizontal">
+        <label>Categoria:</label>
+        <label><p>{{$post->categoria->nome}}</p></label>
       </dl>
       <hr>
       <div class="row">

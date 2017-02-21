@@ -3,13 +3,23 @@
 @section('content')
 <div class="row">
   <div class="col-md-10">
-    <h1>Todas as Categorias</h1> 
-  </div>
-  <div class="col-md-2">
-    <h3> <a href="{{ route('categorias.create')}}" class="btn btn-lg btn-block btn-primary">+</a></h3>
    
   </div>
-  
+  <div class="col-md-3">
+      <div class="well">
+          {!! Form::open(array('route'=>'categorias.store','method'=>'POST')) !!}
+      <!-- Criando o form para cadastro com collective-->
+      {{ Form::label('nome:','Nome:') }}
+      {{ Form::text('nome',null,array('class'=>'form-control', 'data-parsley', 'required'=>'','maxlength'=>'255'))}}
+
+      {{Form::submit('Nova', array('class'=>'btn btn-primary btn-block', 'style'=> 'margin-top:20px;'))}}
+      {!! Form::close() !!}
+      </div>
+       
+  </div>
+   <div class="col-md-4 text-center">
+        <h1>Todas as Categorias</h1> 
+      </div>
 </div> <!-- fim row-->
 
 <div class="row">

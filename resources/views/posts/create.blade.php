@@ -2,6 +2,14 @@
 @section('stylesheets')
 
 {{!! Html::style('css/parsley.css') !!}}
+{{!! Html::style('css/select2.min.css') !!}}
+<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+
+<script>
+	tinymce.init(
+		{ selector:'textarea' 
+	});
+</script>
 
 @endsection
 
@@ -10,6 +18,8 @@
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
 		<h1>Criar novo Post</h1>
+
+		
 		<hr>
 		{!! Form::open(array('route'=>'posts.store','files'=>true)) !!}
 		<!-- Criando o form para cadastro com collective-->
@@ -19,14 +29,19 @@
 		{{ Form::label('slug','Slug:',['class'=>'form-spacing-top'])}}
 		{{ Form::text('slug', null,array('class'=>'form-control', 'data-parsley', 'required'=>'','minlength'=>'5','maxlength'=>'255')) }}
 
+		{{ Form::label('categoria','Categoria')}}
+		{{Form::select('categoria_id',$cats,null,['class'=>'form-control'])}}
+
 		{{ Form::label('texto', 'Texto:', ['class'=>'form-spacing-top'])}} 
 		{{ Form::textarea('texto',null, array('class'=>'form-control', 'data-parsley', 'required'=>''))}} 
+			
 		
-		{{Form::label('imagel',"Selecione a imagem")}}
+		{{Form::label('imagem','Selecione a imagem')}}
 		{{Form::file('file_imagem',['array'=>'form-control'])}}
 
 		{{Form::submit('Cadastrar', array('class'=>'btn btn-success btn-lg btn-block', 'style'=> 'margin-top:20px;'))}}
 		{!! Form::close() !!}
+		<a class="btn btn-primary form-spacing-top" href="{{Route('posts.index')}}"><<</a>
 
 
 	</div>

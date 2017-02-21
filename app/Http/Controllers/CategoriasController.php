@@ -22,7 +22,6 @@ class CategoriasController extends Controller
     {
     $categorias = Categoria::orderBy('id','asc')->paginate(10);
        return view('categorias.index')->withCategorias($categorias);
-     
     }
 
     /**
@@ -53,7 +52,7 @@ class CategoriasController extends Controller
         $cat->save();
         Session::flash('success', 'Dados salvos com sucesso!');
         //redireciona
-        return redirect()->route('categorias.show',$cat->id);
+        return redirect()->route('categorias.index',$cat->id);
     }
 
     /**
