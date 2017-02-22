@@ -11,17 +11,20 @@
 |
 */
 Route::group(['middleware'=>['web']], function(){
-	//rotas de atenticação
-
 	Route::get('blog/{slug}',['as' => 'blog.single', 'uses' => 'BlogController@getSingle'])
 		->where('slug','[\w\d\-\_]+');
 	Route::get('blog',['uses'=>'BlogController@getIndex','as'=>'blog.index']);
+	//roda para galeria de imagens
+	Route::get('/galeria',function(){
+		return view('galeria.index');
+	});
 	Route::get('/','PagesController@getIndex');
 	Route::get('/about', 'PagesController@getAbout');
 	Route::get('/contact', 'PagesController@getContact');
 	Route::post('/contact','PagesController@postContact');
 	Route::resource('posts','PostController');
 	Route::resource('categorias','CategoriasController');
+	//rotas de atenticação
 	Auth::routes();
 
 

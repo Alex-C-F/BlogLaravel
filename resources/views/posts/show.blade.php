@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
 	<div class="col-md-8">
-		<div class="text-center">
+		<div class="text-center ">
 				<img src="{{asset('images/' . $post->imagem)}}" alt="Algo para mostrar" height="200" width="400"/>
 			</div>
 		<h1>{{ $post->titulo }}</h1>
