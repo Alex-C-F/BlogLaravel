@@ -1,17 +1,18 @@
 @extends('main')
 @section('stylesheets')
 
-{{!! Html::style('css/parsley.css') !!}}
-{{!! Html::style('css/select2.min.css') !!}}
-<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+{!! Html::style('css/parsley.css') !!}
+<script src="http://cloud.tinymce.com/stable/tinymce.min.js?apiKey=your_API_key"></script>
 
-<script>
-	tinymce.init(
-		{ selector:'textarea' 
-	});
-</script>
-
-@endsection
+<script src="//cloud.tinymce.com/stable/tinymce.min.js?apiKey=psavptcwhl5y3qi44328vb5fkq4lsbo2r6pvd89a3qt75j1h"></script>
+ <script>
+ 	tinymce.init({ 
+ 		selector:'textarea',
+ 		plugins:'link code',
+ 		plugins:'image',
+ 		menubar:false
+ 	});
+ </script>
 
 @section('title','|Novo Post')
 @section('content')
@@ -33,7 +34,7 @@
 		{{Form::select('categoria_id',$cats,null,['class'=>'form-control'])}}
 
 		{{ Form::label('texto', 'Texto:', ['class'=>'form-spacing-top'])}} 
-		{{ Form::textarea('texto',null, array('class'=>'form-control', 'data-parsley', 'required'=>''))}} 
+		{{ Form::textarea('texto',null, array('class'=>'form-control', 'data-parsley'))}} 
 			
 		
 		{{Form::label('imagem','Selecione a imagem')}}

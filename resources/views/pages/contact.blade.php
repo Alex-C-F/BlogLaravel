@@ -5,7 +5,8 @@
         	<div class="col-lg-12">
             	<h1>Contate-me</h1>
                 <hr>
-                <form>
+                <form action="{{ url('contact')}}" method="POST">
+                {{csrf_field()}}
                 	<div class="form-group">
                     	<label name="email">E-mail:</label>
                         <input id="email" name="email" class="form-control" placeholder="jane.doe@example.com">

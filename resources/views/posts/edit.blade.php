@@ -1,4 +1,15 @@
 @extends('main')
+
+<script src="//cloud.tinymce.com/stable/tinymce.min.js?apiKey=psavptcwhl5y3qi44328vb5fkq4lsbo2r6pvd89a3qt75j1h"></script>
+ <script>
+  tinymce.init({ 
+    selector:'textarea',
+    plugins:'link code',
+    plugins:'image',
+    menubar:false
+  });
+ </script>
+ 
 @section('title','| View Post')
 @section('content')
 <div class="row">

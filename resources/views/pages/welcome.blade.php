@@ -19,7 +19,7 @@
             @foreach ($posts as $post)
     			<div class="post">
     				<h3>{{$post->titulo}}</h3>
-    				<p>{{substr($post->texto,0,300)}}{{strlen($post->texto) > 300 ? "..." : ""}}</p>
+    				<p>{{substr(strip_tags($post->texto),0,300)}}{{strlen(strip_tags($post->texto)) > 300 ? "..." : ""}}</p>
                     <p><a href="{{ url('blog/'.$post->slug)}}" class="btn btn-primary">Leia mais</a></p>
     			</div><!--end post-->
                  <hr>

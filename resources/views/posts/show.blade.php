@@ -7,7 +7,7 @@
 				<img src="{{asset('images/' . $post->imagem)}}" alt="Algo para mostrar" height="200" width="400"/>
 			</div>
 		<h1>{{ $post->titulo }}</h1>
-		<p class="lead"> {{ $post->texto }}</p>
+		<p class="lead"> {!! $post->texto !!}</p>
 	</div>
 	<div class="col-md-4">
 		<div class="well">

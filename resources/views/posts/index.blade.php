@@ -27,7 +27,7 @@
 				<tr>
 					<th>{{$post->id}}</th>
 					<th>{{$post->titulo}}</th>
-					<th>{{substr($post->texto,'0','50')}}{{strlen($post->texto) > 50 ? "...":""}}</th>
+					<th>{{substr(strip_tags($post->texto),'0','50')}}{{strlen(strip_tags($post->texto)) > 50 ? "...":""}}</th>
 					<th>{{$post->created_at}}</th>
 
 					<td>
