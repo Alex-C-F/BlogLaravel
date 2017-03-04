@@ -15,7 +15,7 @@
 			<h2>{{ $post->titulo }}</h2>
 			<h5>Publicado em: {{ date('M j,Y',strtotime($post->created_at)) }}</h5>
 
-			<p>{{ substr($post->texto, 0, 250)}}{{strlen($post->texto) > 250 ? '...' : "" }}</p>
+			<p class="lead">{{ substr(strip_tags($post->texto), 0, 250)}}{!!strlen(strip_tags($post->texto)) > 250 ? '...' : "" !!}</p>
 			<a href="{{route('blog.single', $post->slug)}}" class="btn btn-primary">Leia mais</a>
 			<hr>
 		</div>

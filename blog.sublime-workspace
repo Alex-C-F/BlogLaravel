@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"image",
+				"imagem"
+			],
+			[
+				"Ima",
+				"Image"
+			],
+			[
+				"Image",
+				"image"
+			],
+			[
+				"re",
+				"Request"
+			],
+			[
+				"has",
+				"hash_file"
+			],
+			[
+				"S",
+				"Schema"
+			],
+			[
 				"fun",
 				"function"
 			],
@@ -22,10 +46,6 @@
 			[
 				"func",
 				"function"
-			],
-			[
-				"re",
-				"Request"
 			],
 			[
 				"met",
@@ -70,10 +90,6 @@
 			[
 				"funcao",
 				"funcao\tfuncaosnippet"
-			],
-			[
-				"S",
-				"Storage"
 			],
 			[
 				"ima",
@@ -187,15 +203,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "resources/views/galeria/index.blade.php",
-			"settings":
-			{
-				"buffer_size": 3631,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -209,6 +216,10 @@
 		"selected_items":
 		[
 			[
+				"package control:l",
+				"Package Control: List Packages"
+			],
+			[
 				"",
 				"About"
 			],
@@ -221,7 +232,7 @@
 				"Plugin Development: Convert Syntax to .sublime-syntax"
 			]
 		],
-		"width": 512.0
+		"width": 432.0
 	},
 	"console":
 	{
@@ -251,34 +262,70 @@
 	"expanded_folders":
 	[
 		"/C/wamp/www/BlogLaravel",
-		"/C/wamp/www/BlogLaravel/public",
+		"/C/wamp/www/BlogLaravel/app/Http/Controllers",
+		"/C/wamp/www/BlogLaravel/app/Providers",
+		"/C/wamp/www/BlogLaravel/database/migrations",
 		"/C/wamp/www/BlogLaravel/resources",
 		"/C/wamp/www/BlogLaravel/resources/views",
-		"/C/wamp/www/BlogLaravel/resources/views/galeria",
-		"/C/wamp/www/Galeria-de-imagens-JS-HTML/partes"
+		"/C/wamp/www/BlogLaravel/resources/views/posts",
+		"/C/wamp/www/galeria/app",
+		"/C/wamp/www/galeria/database/migrations",
+		"/C/wamp/www/galeria/public/galeria",
+		"/C/wamp/www/galeria/resources",
+		"/C/wamp/www/galeria/resources/views",
+		"/C/Users/JOTAM02/Desktop/slide"
 	],
 	"file_history":
 	[
+		"/C/wamp/www/BlogLaravel/resources/views/pages/welcome.blade.php",
+		"/C/wamp/www/BlogLaravel/app/Http/Controllers/PostController.php",
+		"/C/wamp/www/BlogLaravel/resources/views/posts/show.blade.php",
+		"/C/wamp/www/BlogLaravel/resources/views/blog/single.blade.php",
+		"/C/Users/JOTAM02/Desktop/slide/standard.html",
+		"/C/wamp/www/BlogLaravel/resources/views/blog/index.blade.php",
+		"/C/Users/JOTAM02/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/wamp/www/galeria/resources/views/imagens/index.blade.php",
+		"/C/wamp/www/galeria/database/migrations/2017_02_24_200425_create_imagens_table.php",
+		"/C/wamp/www/galeria/app/Http/Controllers/GaleriaController.php",
+		"/C/wamp/www/BlogLaravel/database/migrations/2017_01_30_201625_create_posts_table.php",
+		"/C/wamp/www/galeria/resources/views/imagens/create.blade.php",
+		"/C/wamp/www/galeria/.env",
+		"/C/wamp/www/galeria/database/migrations/2014_10_12_100000_create_password_resets_table.php",
+		"/C/wamp/www/galeria/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/C/wamp/www/galeria/database/migrations/2017_02_24_172958_galeria_imagens.php",
+		"/C/wamp/www/BlogLaravel/resources/views/posts/create.blade.php",
+		"/C/wamp/www/galeria/routes/web.php",
+		"/C/wamp/www/galeria/config/app.php",
+		"/C/wamp/www/BlogLaravel/config/app.php",
+		"/C/wamp/www/galeria/resources/views/main.blade.php",
+		"/C/wamp/www/galeria/resources/views/pages/galeria.blade.php",
+		"/C/wamp/www/galeria/resources/views/pages/about.blade.php",
+		"/C/wamp/www/galeria/resources/views/partes/_scripts.blade.php",
+		"/C/wamp/www/galeria/resources/views/partes/_head.blade.php",
+		"/C/wamp/www/galeria/resources/views/partes/_css.blade.php",
+		"/C/wamp/www/galeria/resources/views/partes/_nav.blade.php",
+		"/C/wamp/www/BlogLaravel/resources/views/main.blade.php",
+		"/C/wamp/www/galeria/resources/views/pages/principal",
+		"/C/wamp/www/Galeria-de-imagens-JS-HTML/js/gallery.js",
+		"/C/wamp/www/galeria/resources/partes/_scripts.php",
+		"/C/wamp/www/BlogLaravel/resources/views/galeria/index.blade.php",
+		"/C/wamp/www/Galeria-de-imagens-JS-HTML/index.php",
+		"/C/wamp/www/BlogLaravel/public/css/demo.css",
+		"//server/Prof Alex/sites prontos/modelos de galerias e slides show/ResponsiveImageGallery/index.html",
 		"/C/Users/JOTAM02/AppData/Roaming/Sublime Text 3/Packages/User/formCreate.sublime-snippet",
 		"/C/Users/JOTAM02/AppData/Roaming/Sublime Text 3/Packages/User/initSection.sublime-snippet",
 		"/C/wamp/www/BlogLaravel/routes/web.php",
-		"/C/wamp/www/BlogLaravel/resources/views/galeria/index.blade.php",
 		"/C/wamp/www/ResponsiveImageGallery/_scripts.html",
 		"/C/wamp/www/ResponsiveImageGallery/index.php",
 		"/C/Users/JOTAM02/Desktop/ResponsiveImageGallery/index.php",
 		"/C/Users/JOTAM02/Desktop/ResponsiveImageGallery/partes/_scripts.html",
 		"/C/Users/JOTAM02/Desktop/arquivos do site laravel/tinymce_4.5.3_dev.zip",
-		"/C/wamp/www/BlogLaravel/resources/views/posts/show.blade.php",
-		"/C/wamp/www/BlogLaravel/resources/views/blog/single.blade.php",
 		"/C/wamp/www/BlogLaravel/app/Http/Controllers/PagesController.php",
 		"/C/wamp/www/BlogLaravel/resources/views/pages/contact.blade.php",
 		"/C/wamp/www/BlogLaravel/resources/views/emails/contact.blade.php",
 		"/C/wamp/www/BlogLaravel/.env",
 		"/C/wamp/www/BlogLaravel/resources/views/posts/index.blade.php",
-		"/C/wamp/www/BlogLaravel/resources/views/pages/welcome.blade.php",
 		"/C/wamp/www/BlogLaravel/resources/views/posts/edit.blade.php",
-		"/C/wamp/www/BlogLaravel/resources/views/posts/create.blade.php",
-		"/C/wamp/www/BlogLaravel/app/Http/Controllers/PostController.php",
 		"/C/wamp/www/BlogLaravel/resources/views/categorias/index.blade.php",
 		"/C/wamp/www/BlogLaravel/resources/views/partes/_nav.blade.php",
 		"/C/wamp/www/BlogLaravel/resources/views/categorias/create.blade.php",
@@ -299,15 +346,12 @@
 		"/C/wamp/www/BlogLaravel/database/migrations/2017_02_20_163557_add_categoria_id_to_posts.php",
 		"/C/wamp/www/BlogLaravel/config/filesystems.php",
 		"/C/wamp/www/BlogLaravel/database/migrations/2017_02_16_171458_add_imagem_col_to_posts.php",
-		"/C/wamp/www/BlogLaravel/resources/views/main.blade.php",
 		"/C/wamp/www/BlogLaravel/database/migrations/2017_02_16_163510_add_image_col_posts.php",
-		"/C/wamp/www/BlogLaravel/config/app.php",
 		"/C/wamp/www/BlogLaravel - Copia/resources/views/partes/_nav.blade.php",
 		"/C/wamp/www/BlogLaravel/resources/views/partes/_javascripts.blade.php",
 		"/C/wamp/www/BlogLaravel/resources/teste/teste.blade.php",
 		"/C/wamp/www/BlogLaravel/database/migrations/2017_02_15_211949_add_image_col_posts.php",
 		"/C/Users/JOTAM02/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
-		"/C/Users/JOTAM02/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
 		"/C/wamp/www/BlogLaravel/resources/views/auth/login.blade.php",
 		"/C/wamp/www/BlogLaravel/app/Http/Controllers/Auth/LoginController.php",
 		"/C/wamp/www/BlogLaravel/resources/views/auth/register.blade.php",
@@ -322,7 +366,6 @@
 		"/C/wamp/www/BlogLaravel/app/Http/Controllers/BlogController.php",
 		"/C/wamp/www/BlogLaravel/resources/views/auth/logout.blade.php",
 		"/C/wamp/www/BlogLaravel/app/User.php",
-		"/C/wamp/www/BlogLaravel/resources/views/blog/index.blade.php",
 		"/C/wamp/www/estoque-laravel - Copia/index.php",
 		"/C/wamp/www/BlogLaravel/database/migrations/2017_02_09_131615_add_slug_to_posts.php",
 		"/C/wamp/bin/mysql/mysql5.7.14/my.ini",
@@ -330,7 +373,6 @@
 		"/C/Users/JOTAM02/AppData/Roaming/Sublime Text 3/Packages/Emmet/Default (Windows).sublime-keymap",
 		"/C/Users/JOTAM02/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
 		"/C/Users/JOTAM02/AppData/Roaming/Sublime Text 3/Packages/User/Emmet.sublime-settings",
-		"/C/wamp/www/BlogLaravel/database/migrations/2017_01_30_201625_create_posts_table.php",
 		"/C/wamp/www/BlogLaravel/resources/views/pages/leiamais.blade.php",
 		"/C/wamp/www/BlogLaravel/resources/views/posts/destroy.blade.php",
 		"/C/wamp/bin/apache/apache2.4.23/conf/httpd.conf",
@@ -377,6 +419,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			">\n",
 			")\n",
 			"posts",
 			"Página",
@@ -415,43 +458,19 @@
 		},
 		{
 			"path": "C:\\wamp\\www\\Galeria-de-imagens-JS-HTML"
+		},
+		{
+			"path": "C:\\wamp\\www\\galeria"
+		},
+		{
+			"path": "C:\\Users\\JOTAM02\\Desktop\\slide"
 		}
 	],
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "resources/views/galeria/index.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3631,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								756,
-								756
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 108.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -532,7 +551,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 236.0,
+	"side_bar_width": 336.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -77,7 +77,7 @@ class PostController extends Controller
             $image = $request->file('file_imagem');
             $nomeImagem = time().'.'.$image->getClientOriginalExtension();
             $local = public_path('images/'.$nomeImagem);
-            Image::make($image)->resize(800,400)->save($local);
+            Image::make($image)->resize(1500,600)->save($local);
             $post->imagem = $nomeImagem;
         }
         $post->save();
@@ -166,7 +166,7 @@ class PostController extends Controller
             $image = $request->file('file_imagem');
             $nomeImagem = time().'.'.$image->getClientOriginalExtension();
             $local = public_path('images/'.$nomeImagem);
-            Image::make($image)->resize(800,400)->save($local);
+            Image::make($image)->resize(1500,600)->save($local);
             $imagemAntiga = $post->imagem;
             //atualiza o banco de dados
             $post->imagem = $nomeImagem;
