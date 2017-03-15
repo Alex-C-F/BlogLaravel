@@ -161,7 +161,7 @@ return [
         Illuminate\Session\SessionServiceProvider::class,
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
-        //manipulação de formulários com {{Form::}}
+        //manipulação de formulários com {{Form::}}https://laravelcollective.com/docs/5.2/html
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         //manipulação de imagem http://image.intervention.io/getting_started/installation
