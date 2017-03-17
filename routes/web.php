@@ -25,8 +25,19 @@ Route::group(['middleware'=>['web']], function(){
 	Route::resource('posts','PostController');
 	Route::resource('categorias','CategoriasController');
 	//rotas de atenticação
-	Auth::routes();
+	Route::get('login',['as'=>'login','uses'=> 'Auth\LoginController@showLoginForm']
+	);
 
+	Route::post('login',['as'=>'login','uses'=> 'Auth\LoginController@login']
+	);
+
+	Route::post('password/reset',['as'=>'password.reset','uses'=>'Auth\ResetPasswordController@reset']
+	);
+
+	Route::get('password/reset', ['as'=>'password.request','uses'=>'Auth\ResetPasswordController@showLinkRequestForm']);
+	
+	Route::get('sair',['as'=>'logout','uses'=>'Auth\LoginController@logout']
+		);
 
 });
 

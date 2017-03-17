@@ -74,7 +74,7 @@ class RegisterController extends Controller
 
     public function getRegister(){
         return view('auth.register');
-    }
+    
 
     public function getLogout(){
         return "Deslogado";
