@@ -4,10 +4,21 @@
 <div class="row">
 	<div class="col-md-8">
 		<div class="text-center ">
-				<img src="{{asset('images/' . $post->imagem)}}" alt="Algo para mostrar" height="200" width="400"/>
-			</div>
+			<img src="{{asset('images/' . $post->imagem)}}" alt="Algo para mostrar" height="200" width="400"/>
+		</div>
 		<h1>{{ $post->titulo }}</h1>
 		<p class="lead"> {!! $post->texto !!}</p>
+		<hr>
+		<div class="tags">
+			@if ($post->tags == null)
+				<span class="label label-default">Sem tag definida</span>		
+			@else
+				@foreach($post->tags as $tag)
+					<span class="label label-default">{{$tag->name}}</span>		
+				@endforeach
+			@endif
+		</div>
+		
 	</div>
 	<div class="col-md-4">
 		<div class="well">

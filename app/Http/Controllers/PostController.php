@@ -9,6 +9,7 @@ use Session;
 use Image;
 use Storage;
 use App\Categoria;
+use App\Tag;
 
 class PostController extends Controller
 {
@@ -38,6 +39,13 @@ class PostController extends Controller
      */
     public function create()
     {
+        //obtendo tags
+        $tags = Tag::all();
+        //adicionando as tags a um array
+        $tg = array();
+        foreach ($tags as $tag) {
+            $tg[$tag->id] = $tag->name;
+        }
         //obtendo todas as categorias
         $categorias = Categoria::all();
         //adicionando as categorias a um array
@@ -45,7 +53,7 @@ class PostController extends Controller
         foreach ($categorias as $categoria) {
             $cats[$categoria->id] = $categoria->nome;
         }
-        return view('posts.create')->withCats($cats);
+        return view('posts.create')->withCats($cats)->withTags($tg);
     }
 
     /**
@@ -57,6 +65,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //Validação
+   
         $this->validate($request, array(
                 'titulo'        => 'required|max:255',
                 'texto'         => 'required',
@@ -81,6 +90,8 @@ class PostController extends Controller
             $post->imagem = $nomeImagem;
         }
         $post->save();
+        //após salvar, adiciona todas as tags ao banco de dados com o comando sync
+        $post->tags()->sync($request->tags,false);
         Session::flash('success', 'Dados salvos com sucesso!');
         //redirecionar para a página
         return redirect()->route('posts.show',$post->id);
@@ -110,6 +121,13 @@ class PostController extends Controller
      */
     public function edit($id)
     {
+        //obtendo tags
+        $tags = Tag::all();
+        //adicionando as tags a um array
+        $tg = array();
+        foreach ($tags as $tag) {
+            $tg[$tag->id] = $tag->name;
+        }
         //obtendo todas as categorias
         $categorias = Categoria::all();
         $cats = array();
@@ -121,7 +139,7 @@ class PostController extends Controller
         //busca pelo id
         $post = Post::find($id); 
         //envia o post para a view edit
-        return view('posts.edit')-> withPost($post)->withCats($cats);
+        return view('posts.edit')-> withPost($post)->withCats($cats)->withTags($tg);
     }
 
     /**
@@ -174,6 +192,7 @@ class PostController extends Controller
             Storage::delete($imagemAntiga);
         }
         $post->save();
+        $post->tags()->sync($request->tags,false);
         Session::flash('success', 'Dados alterados com sucesso!');
         //redirecionar para a página
         return redirect()->route('posts.show',$post->id);

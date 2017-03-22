@@ -1,5 +1,10 @@
 @extends('main')
 
+@section('title','| View Post')
+@section('stylesheets')
+  {!! Html::style('css/parsley.css') !!}
+  {!! Html::style('css/select2.min.css') !!}
+
 <script src="//cloud.tinymce.com/stable/tinymce.min.js?apiKey=psavptcwhl5y3qi44328vb5fkq4lsbo2r6pvd89a3qt75j1h"></script>
  <script>
   tinymce.init({ 
@@ -10,7 +15,6 @@
   });
  </script>
  
-@section('title','| View Post')
 @section('content')
 <div class="row">
   {!! Form::model($post, ['route'=>['posts.update',$post->id],'method'=>'PUT','files'=>true]) !!}
@@ -21,9 +25,11 @@
     {{Form::label('slug', 'Slug:')}}
     {{Form::text('slug',null,["class"=>'form-control input-lg'])}}
     
-    {{ Form::label('categoria','Categoria')}}
-    
+    {{ Form::label('categoria','Categoria')}} 
     {{Form::select('categoria_id',$cats,null,['class'=>'form-control' ])}}
+
+    {{ Form::label('tags','Tags:',['class'=>'form-spacing-top'])}} 
+    {{Form::select('tags[]',$tags,null,['class'=>'form-control select2-multi','multiple'=>'multiple'])}}
 
     {{Form::label('texto', 'Texto:',["class"=>'form-spacing-top'])}}
     {{Form::textarea("texto", null, ["class"=>'form-control'])}}
@@ -64,6 +70,17 @@
   {!! Form::close() !!}
 </div>
 
+@endsection
 
+@section('scripts')
+
+{!! Html::script('js/parsley.min.js') !!}
+{!! Html::script('js/select2.min.js') !!}
+
+<script type="text/javascript">
+$('.select2-multi').select2();
+  $('.select2-multi').select2().val({!! $post->tags()->allRelatedIds() !!}).trigger('change');
+  
+</script>
 
 @endsection

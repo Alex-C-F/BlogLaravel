@@ -23,7 +23,8 @@ Route::group(['middleware'=>['web']], function(){
 	Route::get('/contact', 'PagesController@getContact');
 	Route::post('/contact','PagesController@postContact');
 	Route::resource('posts','PostController');
-	Route::resource('categorias','CategoriasController');
+	Route::resource('categorias','CategoriasController',['except'=>['create']]);
+	Route::resource('tags','TagController',['except'=>['create']]);
 	//rotas de atenticação
 	Route::get('login',['as'=>'login','uses'=> 'Auth\LoginController@showLoginForm']
 	);
@@ -34,10 +35,14 @@ Route::group(['middleware'=>['web']], function(){
 	Route::post('password/reset',['as'=>'password.reset','uses'=>'Auth\ResetPasswordController@reset']
 	);
 
-	Route::get('password/reset', ['as'=>'password.request','uses'=>'Auth\ResetPasswordController@showLinkRequestForm']);
+	Route::get('password/reset', ['as'=>'password.request','uses'=>'Auth\ResetPasswordController@showLinkRequestForm']
+	);
 	
 	Route::get('sair',['as'=>'logout','uses'=>'Auth\LoginController@logout']
-		);
+	);
+
+	Route::get('notfound',['as'=>'notfound','uses'=>'PagesController@getNotfound']
+	);
 
 });
 

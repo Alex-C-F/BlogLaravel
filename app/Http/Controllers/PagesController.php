@@ -49,5 +49,10 @@ class PagesController extends Controller
 
 		return redirect('/');
 	}
+
+	public function getNotfound()
+	{
+	   return view('error.notfound');
+	}
 	
 }
